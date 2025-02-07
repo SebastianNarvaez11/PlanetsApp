@@ -1,97 +1,52 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Prueba Técnica - React Native - Sebastian Narvaez
 
-# Getting Started
+## Tres Astronautas
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+### Descripción del Proyecto
+Esta aplicación móvil muestra un listado de planetas del sistema solar, obtenidos desde una API REST pública. Incluye funcionalidades como búsqueda, ordenamiento y marcado de planetas favoritos. También se agrego el tema claro y oscuro como plus
 
-## Step 1: Start Metro
+### Tecnologías Utilizadas
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+Las siguientes librerías fueron utilizadas para el desarrollo de la aplicación:
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+- **@d11/react-native-fast-image**: Para manejo eficiente de imágenes.
+- **@react-native-async-storage/async-storage**: Para almacenamiento local de favoritos.
+- **@react-navigation/bottom-tabs**: Para la navegación mediante tabs.
+- **@react-navigation/native** y **@react-navigation/stack**: Para estructurar la navegación de la app.
+- **@shopify/flash-list**: Para optimizar el renderizado del listado de planetas.
+- **@tanstack/react-query**: Para la gestión de consultas y caché de datos.
+- **axios**: Para realizar llamadas HTTP a la API.
+- **zustand**: Para la gestión del estado global de la aplicación.
 
-```sh
-# Using npm
-npm start
+### Instalación y Ejecución
 
-# OR using Yarn
-yarn start
-```
+1. Clona el repositorio:
+   ```sh
+   git clone https://github.com/SebastianNarvaez11/PlanetsApp.git
+   cd repositorio
+   ```
+2. Instala las dependencias:
+   ```sh
+   yarn install
+   cd ios
+   pod install
+   cd ..
+   ```
+3. Inicia la aplicación en un emulador o dispositivo:
+   ```sh
+   yarn android 
+   yarn ios    
+   ```
+### Decisiones Técnicas
 
-## Step 2: Build and run your app
+- **FlashList en lugar de FlatList**: Mejora el rendimiento del renderizado de listas grandes.
+- **React Query para el manejo de datos**: Permite caching y revalidación automática de las consultas a la API.
+- **Zustand para la gestión de estado**: Estado simple y eficiente sin necesidad de Redux.
+- **FastImage para optimización de imágenes**: Reduce el tiempo de carga y mejora el rendimiento.
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+### API Utilizada
+Como no encontré una API pública que proporcionara el listado de planetas con imágenes, decidí crear mi propia API en Supabase. https://hfuheokmqgrfjvppexaf.supabase.co
 
-### Android
 
-```sh
-# Using npm
-npm run android
+¡Gracias por revisar este proyecto! 🚀
 
-# OR using Yarn
-yarn android
-```
-
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.

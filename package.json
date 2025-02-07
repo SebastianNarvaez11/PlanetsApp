@@ -1,5 +1,6 @@
 {
   "name": "PlanetsApp",
+  "author": "Sebastian Narvaez",
   "version": "0.0.1",
   "private": true,
   "scripts": {
